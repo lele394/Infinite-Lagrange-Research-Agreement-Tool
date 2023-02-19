@@ -9,8 +9,8 @@ to use please visit [lele394.github.io/Infinite-Lagrange-Research-Agreement-Tool
 Planned features :
 * ship options preview : done
 * filters preview : input filters to see possible outcomes : done
-* apply selected ship options to the filter preview : next in line
+* apply selected ship options to the filter preview : done
+* makin it look dop' : on it!
 * save current selection in local cache/text format : planned
-* makin it look dop' : once all 3 main features are implemented
 
 Feel free to contact me here in the issues tab.
