@@ -31,36 +31,80 @@
       <!--   FACTIONS   -->
       <tr>
         <td>Industry faction</td>
-        <td id="industry"></td>
+        <td id="industry">unk</td>
       </tr>
 
       <!--   TYPE   -->
       <tr>
         <td>Outstanding Firepower</td>
-        <td id="firepower"></td>
+        <td id="firepower">□</td>
       </tr>
       <tr>
         <td>Sustained Combat</td>
-        <td id="sustained"></td>
+        <td id="sustained">□</td>
       </tr>
       <tr>
         <td>Strategy and support</td>
-        <td id="support"></td>
+        <td id="support">□</td>
       </tr>
       <tr>
         <td>Fighters and corvettes</td>
-        <td id="aircraft"></td>
+        <td id="aircraft">□</td>
       </tr>
 
       <!--  PHASE 3?  -->
       <tr>
         <td>Projectile Weapons</td>
-        <td id="projectile"></td>
+        <td id="projectile">□</td>
       </tr>
       <tr>
         <td>Direct Fire Weapons</td>
-        <td id="direct"></td>
+        <td id="direct">□</td>
       </tr>
     </table>
+
+    <!--  here is the options selector lol  -->
+    <table>
+        <tr>
+            <th>Research Options Selector</th>
+        </tr>
+        <tr>
+            <td>Industry</td>
+            <td>
+                <select name="industry" id="industry-selector">
+                    <option value="select">Select an industry</option>
+                    <option value="jupiter">Jupiter Industries</option>
+                    <option value="noma">Noma</option>
+                    <option value="antonios">Antonios</option>
+                    <option value="dawn">Dawn Accord</option>
+                  </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Outstanding Firepower</td>
+            <td><input type="checkbox" name="select-FP" id="select-FP"></td>
+        </tr>
+        <tr>
+            <td>Sustained Combat</td>
+            <td><input type="checkbox" name="select-sustain" id="select-sustain"></td>
+        </tr>
+        <tr>
+            <td>Strategy and support</td>
+            <td><input type="checkbox" name="select-support" id="select-support"></td>
+        </tr>
+        <tr>
+            <td>Fighters and corvettes</td>
+            <td><input type="checkbox" name="select-aircraft" id="select-aircraft"></td>
+        </tr>
+        <tr>
+            <td>Projectile Weapons</td>
+            <td><input type="checkbox" name="select-projectile" id="select-projectile"></td>
+        </tr>
+        <tr>
+            <td>Direct Fire Weapons</td>
+            <td><input type="checkbox" name="select-direct" id="select-direct"></td>
+        </tr>
+    </table>
+
   </body>
 </html>
