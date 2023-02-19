@@ -71,12 +71,13 @@
         <tr>
             <td>Industry</td>
             <td>
-                <select name="industry" id="industry-selector">
+                <select name="industry" id="select-industry">
                     <option value="select">Select an industry</option>
-                    <option value="jupiter">Jupiter Industries</option>
-                    <option value="noma">Noma</option>
-                    <option value="antonios">Antonios</option>
-                    <option value="dawn">Dawn Accord</option>
+                    <option value="all">all</option>
+                    <option value="Jupiter Industries">Jupiter Industries</option>
+                    <option value="Noma">Noma</option>
+                    <option value="Antonios">Antonios</option>
+                    <option value="Dawn Accord">Dawn Accord</option>
                   </select>
             </td>
         </tr>
@@ -103,6 +104,11 @@
         <tr>
             <td>Direct Fire Weapons</td>
             <td><input type="checkbox" name="select-direct" id="select-direct"></td>
+        </tr>
+        <tr>
+            <td>
+                <button id="select-apply" onclick="SelectApply();">appply</button>
+            </td>
         </tr>
     </table>
 

@@ -122,6 +122,7 @@ document
   .addEventListener("change", function (e) {
       
     let ship = GetShip(this.value);
+    console.log("Getting "+this.value+" data")
     console.log(ship);
     SetInfos(ship);
 
@@ -239,4 +240,62 @@ function SetInfos(ship){
     document.getElementById("aircraft").innerHTML = SetCheck(ship.aircraft);
     document.getElementById("projectile").innerHTML = SetCheck(ship.projectile);
     document.getElementById("direct").innerHTML = SetCheck(ship.directFire);
+}
+
+
+
+
+//Research options stuff
+
+window.SelectApply=()=> {
+    console.log("Applying selected filters");
+
+    let fits = GetFittingShips();
+    console.log(fits);
+    //CalculateData();
+    //DisplayData();
+};
+
+
+function GetFittingShips() {
+
+    //get all filters
+    let Findustry = document.getElementById("select-industry").value;
+    let Ffirepower = document.getElementById("select-FP").checked;
+    let Fsustain = document.getElementById("select-sustain").checked;
+    let Fsupport = document.getElementById("select-support").checked;
+    let Faircraft = document.getElementById("select-aircraft").checked;
+    let Fprojectile = document.getElementById("select-projectile").checked;
+    let Fdirect = document.getElementById("select-direct").checked;
+
+    console.log(Findustry);
+
+    let fitting = [];
+
+    ships.forEach(ship => {
+        
+        if(
+            (Findustry == "all" || Findustry == ship.industry)
+            &&
+            (ship.outstandingFP == Ffirepower || Ffirepower == false)
+            &&
+            (ship.sustained == Fsustain || Fsustain == false)
+            &&
+            (ship.support == Fsupport || Fsupport == false)
+            &&
+            (ship.aircraft == Faircraft || Faircraft == false)
+            &&
+            (ship.projectile == Fprojectile || Fprojectile == false)
+            &&
+            (ship.directFire == Fdirect || Fdirect == false)
+        )
+        {
+            fitting.push(ship)
+        }
+        
+    });
+    
+    return fitting
+
+
 }
