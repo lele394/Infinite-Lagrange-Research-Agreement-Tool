@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IL Research Agrement Tool</title>
+    <link rel="stylesheet" href="style/indexStyle.css" />
+    <script src="script/indexScript.js" type="module"></script>
+  </head>
+  <body>
+    
+    <!--don't really know, but constructs the array at loading time. but can't aftr, dafaq?-->
+    <button id="load-button" onclick="LoadData();" style="visibility: hidden;">LoadData</button>
+
+
+
+    <table id="ship-infos">
+      <tr>
+        <th>Ship Selector</th>
+      </tr>
+      <tr>
+        <td>Ship</td>
+        <td>
+          <select name="Ship" id="ship-selector">
+            <option value="select">Select a ship</option>
+          </select>
+        </td>
+      </tr>
+
+      <!--   FACTIONS   -->
+      <tr>
+        <td>Industry faction</td>
+        <td id="industry"></td>
+      </tr>
+
+      <!--   TYPE   -->
+      <tr>
+        <td>Outstanding Firepower</td>
+        <td id="firepower"></td>
+      </tr>
+      <tr>
+        <td>Sustained Combat</td>
+        <td id="sustained"></td>
+      </tr>
+      <tr>
+        <td>Strategy and support</td>
+        <td id="support"></td>
+      </tr>
+      <tr>
+        <td>Fighters and corvettes</td>
+        <td id="aircraft"></td>
+      </tr>
+
+      <!--  PHASE 3?  -->
+      <tr>
+        <td>Projectile Weapons</td>
+        <td id="projectile"></td>
+      </tr>
+      <tr>
+        <td>Direct Fire Weapons</td>
+        <td id="direct"></td>
+      </tr>
+    </table>
+  </body>
+</html>
