@@ -11,6 +11,6 @@ Planned features :
 * filters preview : input filters to see possible outcomes : next in line
 * apply selected ship options to the filter preview : 2nd in line
 * save current selection in local cache/text format : planned
-
+* makin it look dop' : once all 3 main features are implemented
 
 Feel free to contact me here in the issues tab.
