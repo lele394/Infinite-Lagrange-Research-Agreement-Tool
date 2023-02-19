@@ -188,7 +188,7 @@ function CreateShipFromLineArray(arr) {
         //basics
         name : arr[0],
         type : arr[1],
-        weight : arr[2],
+        weight : parseInt(arr[2]),
         industry : GetIndustry(arr),
         //strategic filters
         outstandingFP : convertTF(arr[7]),
@@ -252,8 +252,10 @@ window.SelectApply=()=> {
 
     let fits = GetFittingShips();
     console.log(fits);
-    //CalculateData();
-    //DisplayData();
+    let percentages, weights;
+    [percentages, weights] = CalculateData(fits);
+
+    DisplayData(fits, percentages, weights);
 };
 
 
@@ -296,6 +298,59 @@ function GetFittingShips() {
     });
     
     return fitting
+
+
+}
+
+
+function CalculateData(fittings) {
+    let percentages = [];
+    let weights = [];
+
+    //get all weights
+    fittings.forEach(ship => {
+        weights.push(ship.weight)
+    });
+
+    //compute sum of all weights
+    let WeightSum = 0;
+    weights.forEach(weight => {
+        WeightSum += weight
+    });
+    console.log(WeightSum);
+    //compute each percentages for each ship
+    weights.forEach(weight => {
+        percentages.push((weight/WeightSum * 100).toFixed(2))
+    });
+
+
+    return [percentages, weights]
+}
+
+
+function DisplayData(fits, percentages, weights) {
+    //cleans the display list
+    var e = document.getElementById("fitting-display");
+    //rm children
+    var child = e.lastElementChild;
+    while (child) {
+      e.removeChild(child);
+      child = e.lastElementChild;
+    }
+
+    const container = document.getElementById("fitting-display");
+    const template = document.getElementById("fits-template"); 
+    let index = 0;
+    fits.forEach(ship => {
+        const clone = template.content.cloneNode(true);
+        let elements = clone.querySelectorAll("div");
+        elements[1].innerHTML = ship.name;
+        elements[2].innerHTML = weights[index];
+        elements[3].innerHTML = percentages[index];
+        container.appendChild(clone);
+        index +=1;
+    });
+
 
 
 }
