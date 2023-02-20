@@ -367,25 +367,25 @@ function GetShipIcon(type) {
             return "/ship-classes/DestroyerIcon.webp";
 
         case "Fighter":
-            return "/ship-classes/FighterIcon.webp";
+            return "ship-classes/FighterIcon.webp";
             
         case "Cruiser":
-            return "/ship-classes/CruiserIcon.webp";
+            return "ship-classes/CruiserIcon.webp";
             
         case "Frigate":
-            return "/ship-classes/FrigateIcon.webp";
+            return "ship-classes/FrigateIcon.webp";
             
         case "Battlecruiser":
-            return "/ship-classes/BattlecruiserIcon.webp";
+            return "ship-classes/BattlecruiserIcon.webp";
             
         case "Corvette":
-            return "/ship-classes/CorvetteIcon.webp";
+            return "ship-classes/CorvetteIcon.webp";
             
         case "Auxiliary Ship":
-            return "/ship-classes/AuxiliaryShipIcon.webp";
+            return "ship-classes/AuxiliaryShipIcon.webp";
             
         case "Carrier":
-            return "/ship-classes/CarrierIcon.webp";
+            return "ship-classes/CarrierIcon.webp";
 
     }
 }
