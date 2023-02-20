@@ -364,7 +364,7 @@ function DisplayData(fits, percentages, weights) {
 function GetShipIcon(type) {
     switch(type) {
         case "Destroyer":
-            return "/ship-classes/DestroyerIcon.webp";
+            return "ship-classes/DestroyerIcon.webp";
 
         case "Fighter":
             return "ship-classes/FighterIcon.webp";
