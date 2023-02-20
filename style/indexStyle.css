@@ -10,6 +10,7 @@
     --bg : #212121;
     --light-bg : #323232;
     --dark-teal : #0d7377;
+    --darker-teal : #074244;
     --light-teal : #14ffec;
 
 
@@ -83,11 +84,20 @@ select {
     padding: 0.3em 1.5em;
     border-radius: 100vmax;
     margin: 1em;
-    border: solid 2px var(--dark-teal);
     background: var(--light-bg);
     width: 18em;
     font-weight: bold;
+    box-shadow: 0 0 0 #00000065;
+    transition: all cubic-bezier(0.37, 1.11, 0.51, 1) 300ms;
 }
+
+.ship-display:hover {
+    background: var(--darker-teal);
+    box-shadow: 0 7px #00000065;
+    transform: translateY(-7px);
+}
+
+
 
 .ship-icon {
     aspect-ratio: 32/32;
