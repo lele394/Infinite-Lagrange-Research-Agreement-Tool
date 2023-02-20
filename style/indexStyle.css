@@ -23,6 +23,14 @@ body {
     background: var(--bg);
 }
 
+a {
+    color: #39ff14
+}
+
+p {
+    margin: 15px;
+}
+
 table {
     margin-top: 20px;
     width: 23rem;

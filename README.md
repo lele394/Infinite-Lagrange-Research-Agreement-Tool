@@ -10,7 +10,7 @@ Planned features :
 * ship options preview : done
 * filters preview : input filters to see possible outcomes : done
 * apply selected ship options to the filter preview : done
-* makin it look dop' : on it!
+* makin it look dop' : on it! (planned to add multiple color theme for fun lol)
 * save current selection in local cache/text format : planned
 
 Feel free to contact me here in the issues tab.
