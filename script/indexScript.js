@@ -346,7 +346,7 @@ function DisplayData(fits, percentages, weights) {
         let elements = clone.querySelectorAll("div");
         elements[1].innerHTML = ship.name;
         elements[2].innerHTML = weights[index];
-        elements[3].innerHTML = percentages[index];
+        elements[3].innerHTML = percentages[index] + "%";
         container.appendChild(clone);
         index +=1;
     });

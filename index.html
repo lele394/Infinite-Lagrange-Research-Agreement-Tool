@@ -17,7 +17,7 @@
 
     <table id="ship-infos">
       <tr>
-        <th>Ship Selector</th>
+        <th colspan="2">Ship Selector</th>
       </tr>
       <tr>
         <td>Ship</td>
@@ -66,7 +66,7 @@
     <!--  here is the options selector lol  -->
     <table>
         <tr>
-            <th>Research Options Selector</th>
+            <th colspan="2">Research Options Selector</th>
         </tr>
         <tr>
             <td>Industry</td>
@@ -105,18 +105,25 @@
             <td>Direct Fire Weapons</td>
             <td><input type="checkbox" name="select-direct" id="select-direct"></td>
         </tr>
-        <tr>
-            <td>
-                <button id="select-apply" onclick="SelectApply();">appply</button>
-            </td>
-        </tr>
+
+        
     </table>
+
+    <button id="select-apply" onclick="SelectApply();">appply</button>
 
     <h1>Ships Fitting Filters</h1>
     <div id="fitting-display"></div>
 
+
+
+
+
+
+
+
+
     <template id="fits-template">
-        <div>
+        <div class="ship-display">
             <div id="name">name</div>
             <div id="percentage">%</div>
             <div id="weight">w</div>
