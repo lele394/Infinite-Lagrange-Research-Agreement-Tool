@@ -78,13 +78,22 @@ select {
 }
 
 .ship-display {
-    padding: 0.3em;
-    border-radius: 0.2em;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.3em 1.5em;
+    border-radius: 100vmax;
     margin: 1em;
     border: solid 2px var(--dark-teal);
     background: var(--light-bg);
-    width: 15em;
+    width: 18em;
     font-weight: bold;
+}
+
+.ship-icon {
+    aspect-ratio: 32/32;
+    height: 3em;
+    margin: 0.2em;
+    border-radius: 10%;
 }
 
 .display-name {

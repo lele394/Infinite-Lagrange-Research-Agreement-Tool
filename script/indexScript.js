@@ -344,13 +344,48 @@ function DisplayData(fits, percentages, weights) {
     fits.forEach(ship => {
         const clone = template.content.cloneNode(true);
         let elements = clone.querySelectorAll("div");
-        elements[1].innerHTML = ship.name;
-        elements[2].innerHTML = weights[index];
-        elements[3].innerHTML = percentages[index] + "%";
+        //console.log(elements);
+        //indices should be change using the correct index (see them usin the console log above)
+        elements[2].innerHTML = ship.name;
+        elements[3].innerHTML = weights[index];
+        elements[4].innerHTML = percentages[index] + "%";
+        //change image
+        clone.querySelectorAll("img")[0].src = GetShipIcon(ship.type);//takes the first one cuz there's only one image in the ship card, change it to fit any changes
+        
         container.appendChild(clone);
         index +=1;
     });
 
 
 
+}
+
+
+function GetShipIcon(type) {
+    switch(type) {
+        case "Destroyer":
+            return "/ship-classes/DestroyerIcon.webp";
+
+        case "Fighter":
+            return "/ship-classes/FighterIcon.webp";
+            
+        case "Cruiser":
+            return "/ship-classes/CruiserIcon.webp";
+            
+        case "Frigate":
+            return "/ship-classes/FrigateIcon.webp";
+            
+        case "Battlecruiser":
+            return "/ship-classes/BattlecruiserIcon.webp";
+            
+        case "Corvette":
+            return "/ship-classes/CorvetteIcon.webp";
+            
+        case "Auxiliary Ship":
+            return "/ship-classes/AuxiliaryShipIcon.webp";
+            
+        case "Carrier":
+            return "/ship-classes/CarrierIcon.webp";
+
+    }
 }
