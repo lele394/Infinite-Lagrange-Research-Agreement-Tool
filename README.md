@@ -11,6 +11,8 @@ Planned features :
 * filters preview : input filters to see possible outcomes : done
 * apply selected ship options to the filter preview : on it
 * makin it look dop' : always on it! (planned to add multiple color theme for fun lol)
+* display numbers of ships of each categories : planned
+* display graphs for visual representation of percentages for each ship : planned
 * save current selection in local cache/text format : planned
 
 Feel free to contact me here in the issues tab.
