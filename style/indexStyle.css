@@ -50,14 +50,16 @@ td:nth-child(2) {
 #select-apply {
     margin : 1em;
     font-size: x-large;
-    padding : 0.3em;
+    padding : 0.3em 0.5em;
     background: var(--dark-teal);
-    border-radius: 10px;
-    transition: all ease-in 100ms;
+    border-radius: 100vmax;
+    transition: all ease-in 50ms;
 }
 
 #select-apply:hover {
-    filter: brightness(85%);
+    background: var(--darker-teal);
+    box-shadow: 0 2px #00000065;
+    transform: translateY(-2px);
 } 
 
 input[type='checkbox'] {
