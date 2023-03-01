@@ -1,3 +1,73 @@
+//heres the part about themes, for page logic look below
+
+window.SetTheme=(theme)=> {
+    console.log(`loading ${theme} theme`)
+    let dark;
+    let darker;
+    let light;
+    switch(theme){
+        case "teal":
+            dark = "#0d7377";
+            darker = "#074244";
+            light = "#14ffec";
+            break
+
+        case "red":
+            dark = "#770d0d";
+            darker = "#440707";
+            light = "#ff1414";
+            break
+
+        case "green":
+            dark = "#13770d";
+            darker = "#074407";
+            light = "#1fff14";
+            break
+
+        case "neon-pink":
+            dark = "#770d6d";
+            darker = "#430744";
+            light = "#ff14fb";
+            break
+
+        case "pink":
+            dark = "#770d4e";
+            darker = "#440730";
+            light = "#ff148f";
+            break
+    }
+
+    var r = document.querySelector(':root');
+    //css vars have teal, cuz that's the default way it was styled, and the color i used. easy to chang if you wish to. Css ain't that long.
+    r.style.setProperty('--dark-teal', dark);
+    r.style.setProperty('--darker-teal', darker);
+    r.style.setProperty('--light-teal', light);
+
+}
+
+/*
+--dark-teal : #0d7377;
+--darker-teal : #074244;
+--light-teal : #14ffec;
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //u ain't gonna like that mister i read your code
 let dataCsv = `,,,Industry filter,,,,Strategic filter,,,,Tactical filter,,
 Blue Print,Ship Type,Weight,Jupiter Industries,Noma,Antonios,Dawn Accord,Oustanding Firepower,Sustained Combat,Strategy And Support,Fighter & Corvette,Projectile Weapons,Direct-Fire Weapons,Empty

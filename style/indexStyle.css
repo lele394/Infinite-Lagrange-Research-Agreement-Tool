@@ -24,6 +24,28 @@ body {
     background: var(--bg);
 }
 
+#themes > button {
+
+    width: 2em;
+    height: 2em;
+    border-radius: 100%;
+    border: none;
+
+    background: var(--custom-bg) /*custom bg set directly in html*/
+                radial-gradient(circle, rgba(0,0,0,0) 20%, var(--bg) 60%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 a {
     color: #39ff14
 }
