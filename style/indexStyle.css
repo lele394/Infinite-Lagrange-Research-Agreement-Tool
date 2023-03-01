@@ -47,6 +47,11 @@ td:nth-child(2) {
     align-items: center;
 }
 
+td:nth-child(3) {
+    text-align: center;
+}
+
+
 #select-apply {
     margin : 1em;
     font-size: x-large;

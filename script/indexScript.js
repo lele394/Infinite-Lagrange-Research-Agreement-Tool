@@ -358,6 +358,108 @@ function DisplayData(fits, percentages, weights) {
 
 
 
+
+    //sets percentages and numbers in the stats section
+    //structure for data storage
+    let data = {
+        number : {
+            carrier : 0,
+            auxiliary: 0,
+            battlecruiser: 0,
+            cruiser: 0,
+            destroyer: 0,
+            frigate: 0,
+            corvette: 0,
+            fighter:0
+        },
+        percentages : {
+            carrier : 0,
+            auxiliary: 0,
+            battlecruiser: 0,
+            cruiser: 0,
+            destroyer: 0,
+            frigate: 0,
+            corvette: 0,
+            fighter:0
+        }
+    }
+
+
+    index = 0;
+
+    fits.forEach(ship => {
+        switch(ship.type) {
+            case "Destroyer":
+                data.number.destroyer+=1;
+                data.percentages.destroyer+=parseFloat(percentages[index]);
+                break
+    
+            case "Fighter":
+                data.number.fighter+=1;
+                data.percentages.fighter+=parseFloat(percentages[index]);
+                break
+                
+            case "Cruiser":
+                data.number.cruiser+=1;
+                data.percentages.cruiser+=parseFloat(percentages[index]);
+                break
+                
+            case "Frigate":
+                data.number.frigate+=1;
+                data.percentages.frigate+=parseFloat(percentages[index]);
+                break
+                
+            case "Battlecruiser":
+                data.number.battlecruiser+=1;
+                data.percentages.battlecruiser+=parseFloat(percentages[index]);
+                break
+                
+            case "Corvette":
+                data.number.corvette+=1;
+                data.percentages.corvette+=parseFloat(percentages[index]);
+                break
+                
+            case "Auxiliary Ship":
+                data.number.auxiliary+=1;
+                data.percentages.auxiliary+=parseFloat(percentages[index]);
+                break
+                
+            case "Carrier":
+                data.number.carrier+=1;
+                data.percentages.carrier+=parseFloat(percentages[index]);
+                break
+    
+        }
+
+        index++;
+    });
+
+
+
+    //set all the things we've computed above
+    //numbers
+    document.getElementById("stat-carrier-nb").innerHTML = data.number.carrier;
+    document.getElementById("stat-auxiliary-nb").innerHTML = data.number.auxiliary;
+    document.getElementById("stat-battlecruiser-nb").innerHTML = data.number.battlecruiser;
+    document.getElementById("stat-cruiser-nb").innerHTML = data.number.cruiser;
+    document.getElementById("stat-destroyer-nb").innerHTML = data.number.destroyer;
+    document.getElementById("stat-frigate-nb").innerHTML = data.number.frigate;
+    document.getElementById("stat-corvette-nb").innerHTML = data.number.corvette;
+    document.getElementById("stat-fighter-nb").innerHTML = data.number.fighter;
+    //percentages
+    document.getElementById("stat-carrier-perc").innerHTML = Math.round(100*data.percentages.carrier)/100;
+    document.getElementById("stat-auxiliary-perc").innerHTML = Math.round(100*data.percentages.auxiliary)/100;
+    document.getElementById("stat-battlecruiser-perc").innerHTML = Math.round(100*data.percentages.battlecruiser)/100;
+    document.getElementById("stat-cruiser-perc").innerHTML = Math.round(100*data.percentages.cruiser)/100;
+    document.getElementById("stat-destroyer-perc").innerHTML = Math.round(100*data.percentages.destroyer)/100;
+    document.getElementById("stat-frigate-perc").innerHTML = Math.round(100*data.percentages.frigate)/100;
+    document.getElementById("stat-corvette-perc").innerHTML = Math.round(100*data.percentages.corvette)/100;
+    document.getElementById("stat-fighter-perc").innerHTML = Math.round(100*data.percentages.fighter)/100;
+
+
+
+
+
 }
 
 
