@@ -6,14 +6,14 @@
 
     font-family:Arial, Helvetica, sans-serif;
     color: var(--light-teal);
+}
 
+:root{
     --bg : #212121;
     --light-bg : #323232;
     --dark-teal : #0d7377;
     --darker-teal : #074244;
     --light-teal : #14ffec;
-
-
 }
 
 
